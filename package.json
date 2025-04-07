@@ -1,6 +1,6 @@
 {
   "name": "create-monad-dapp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network.",
   "bin": "./bin/index.js",
   "author": "Neeraj Choubisa",

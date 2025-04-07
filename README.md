@@ -1,9 +1,10 @@
-<p align="center">
-    <img align="center" src="https://res.cloudinary.com/delg5k1gs/image/upload/v1708035198/daic/n/b5121cb2-0fcd-4ffd-ba92-a744f967dd3b/monad__a_parallelized_evm_layer_1_at_hyper_speed.png" width="175"></img>
-</p>
 
+
+<div align="center">
+    <img src="https://res.cloudinary.com/delg5k1gs/image/upload/v1708035198/daic/n/b5121cb2-0fcd-4ffd-ba92-a744f967dd3b/monad__a_parallelized_evm_layer_1_at_hyper_speed.png" alt="Platform">
+</div><br>
 <h1 align="center">create-monad-dapp</h1>
-<br>
+
 
 A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network. The starter kit also includes pre-installed `web3.storage`, `tailwindcss`, `web3.js`, etc. packages.
 
