@@ -1,32 +1,26 @@
 <p align="center">
-    <img align="center" src="/src/logo.png" width="175"></img>
+    <img align="center" src="https://res.cloudinary.com/delg5k1gs/image/upload/v1708035198/daic/n/b5121cb2-0fcd-4ffd-ba92-a744f967dd3b/monad__a_parallelized_evm_layer_1_at_hyper_speed.png" width="175"></img>
 </p>
 
-<h1 align="center">create-fvm-dapp</h1>
+<h1 align="center">create-monad-dapp</h1>
+<br>
 
-<div align="center">
-    <img src="https://img.shields.io/badge/platform-filecoin-blue.svg?style=flat-square" alt="Platform">
-    <img src="https://img.shields.io/github/license/akhileshthite/create-fvm-dapp?color=orange&style=flat-square" alt="License">
-    <img src="https://img.shields.io/github/v/release/akhileshthite/create-fvm-dapp?color=purple&style=flat-square" alt="Release">
-    <img src="https://img.shields.io/npm/dw/create-fvm-dapp?style=flat-square" alt="Downloads">
-</div><br>
-
-A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the FEVM network. The starter kit also includes pre-installed `web3.storage`, `tailwindcss`, `web3.js`, etc. packages.
+A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network. The starter kit also includes pre-installed `web3.storage`, `tailwindcss`, `web3.js`, etc. packages.
 
 ## 📺 Quickstart
 
-<div align="center">
+<!-- <div align="center">
   <img src="/demo.gif" />
-</div>
+</div> -->
 
 ## 🛠️ Installation guide
 
-### ⌛️ create-fvm-dapp command
+### ⌛️ create-monad-dapp command
 
 Open up your terminal (or command prompt) and type the following command:
 
 ```sh
-npx create-fvm-dapp <your-dapp-name>
+npx create-monad-dapp <your-dapp-name>
 
 # cd into the directory
 cd <your-dapp-name>
@@ -55,7 +49,7 @@ npx hardhat test
 
 After successful compilation, the artifacts directory will be created in `./src/artifacts` with a JSON `/contracts/<your-contracts>.sol/<your-contracts>.json` containing ABI and Bytecode of your compiled smart contracts.
 
-Please make the changes while [Importing](https://github.com/akhileshthite/create-fvm-dapp/blob/670b4561e7da5db6faa121f2664c427b8427da60/src/App.js#L9) the JSON in `./src/app.js`.
+Please make the changes while [Importing](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js) the JSON in `./src/app.js`.
 
 ### ⛓️ Deploy
 
@@ -68,7 +62,7 @@ For deploying the smart contracts to FEVM network, type the following command:
 ```sh
 npx hardhat run --network hyperspace scripts/deploy.js
 
-# mainnet: npx hardhat run --network filecoin_mainnet scripts/deploy.js
+# mainnet: npx hardhat run --network monad scripts/deploy.js
 ```
 
 Copy-paste the deployed contract address [here](https://github.com/akhileshthite/create-fvm-dapp/blob/27af748b814f3e1448db710af03f39d12464cc20/src/App.js#L32)
@@ -86,11 +80,11 @@ npm start
 # Starting the development server...
 ```
 
-Please read the [hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#quick-start) and [FVM documentation](https://docs.filecoin.io/developers/smart-contracts/filecoin-virtual-machine/) for more details.
+Please read the [hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#quick-start) and [Monad Docs](https://www.monad.xyz/ecosystem) for more details.
 
 ## ⚖️ License
 
-create-fvm-dapp is licensed under the [MIT License](https://github.com/akhileshthite/create-fvm-dapp/blob/main/LICENSE).
+create-monad-dapp is licensed under the [MIT License](https://github.com/akhileshthite/create-fvm-dapp/blob/main/LICENSE).
 
 <hr>
 Don't forget to leave a star ⭐️ ~ <a href="https://twitter.com/akhileshthite_" target="_blank"><img src="https://img.shields.io/twitter/follow/akhileshthite_?style=social" alt="twitter" /></a>
