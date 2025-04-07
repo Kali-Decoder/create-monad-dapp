@@ -1,35 +1,42 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const ACCOUNTS = process.env.PRIVATE_KEY ? [`${process.env.PRIVATE_KEY}`] : [];
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: {
-    version: "0.8.17",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
+  defaultNetwork: "hardhat",
+  gasReporter: {
+    enabled: false,
+  },
+  networks: {
+    hardhat: { chainId: 31337 },
+    monadTestnet: {
+      url: "https://testnet-rpc.monad.xyz",
+      chainId: 10143,
+      accounts: ACCOUNTS,
     },
   },
-  defaultNetwork: "hyperspace",
-  networks: {
-    hyperspace: {
-      chainId: 3141,
-      url: "https://api.hyperspace.node.glif.io/rpc/v1",
-      accounts: [PRIVATE_KEY ?? "undefined"],
-    },
-    filecoin_mainnet: {
-      chainId: 314,
-      url: "https://api.node.glif.io",
-      accounts: [PRIVATE_KEY ?? "undefined"],
+  sourcify: {
+    enabled: true,
+    apiUrl: "https://sourcify-api-monad.blockvision.org",
+    browserUrl: "https://testnet.monadexplorer.com",
+  },
+  etherscan: {
+    enabled: false,
+  },
+  solidity: {
+    version: "0.8.28",
+    settings: {
+      metadata: {
+        bytecodeHash: "none", // disable ipfs
+        useLiteralContent: true, // use source code
+      },
     },
   },
   paths: {
     sources: "./contracts",
     tests: "./test",
     cache: "./cache",
-    artifacts: "./src/artifacts",
+    artifacts: "./artifacts",
   },
 };

@@ -5,7 +5,6 @@
 </div><br>
 <h1 align="center">create-monad-dapp</h1>
 
-
 A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network. The starter kit also includes pre-installed `web3.storage`, `tailwindcss`, `web3.js`, etc. packages.
 
 ## 📺 Quickstart
@@ -50,7 +49,7 @@ npx hardhat test
 
 After successful compilation, the artifacts directory will be created in `./src/artifacts` with a JSON `/contracts/<your-contracts>.sol/<your-contracts>.json` containing ABI and Bytecode of your compiled smart contracts.
 
-Please make the changes while [Importing](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js) the JSON in `./src/app.js`.
+Please make the changes while [Importing](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js#L32) the JSON in `./src/app.js`.
 
 ### ⛓️ Deploy
 
@@ -58,15 +57,15 @@ Before deploying the smart contracts, please make sure you have a `hyperspace te
 
 Also, make changes in `./scripts/deploy.js` (replace the greeter contract name with `<your-contract-name>`).
 
-For deploying the smart contracts to FEVM network, type the following command:
+For deploying the smart contracts to Monad network, type the following command:
 
 ```sh
-npx hardhat run --network hyperspace scripts/deploy.js
+npx hardhat run --network monad scripts/deploy.js
 
-# mainnet: npx hardhat run --network monad scripts/deploy.js
+# testnet: npx hardhat run --network monad scripts/deploy.js
 ```
 
-Copy-paste the deployed contract address [here](https://github.com/akhileshthite/create-fvm-dapp/blob/27af748b814f3e1448db710af03f39d12464cc20/src/App.js#L32)
+Copy-paste the deployed contract address [here](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js#L32)
 
 ```sh
 📜 Contract deployed to: 0x...
@@ -85,7 +84,7 @@ Please read the [hardhat documentation](https://hardhat.org/hardhat-runner/docs/
 
 ## ⚖️ License
 
-create-monad-dapp is licensed under the [MIT License](https://github.com/akhileshthite/create-fvm-dapp/blob/main/LICENSE).
+create-monad-dapp is licensed under the [MIT License](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/LICENSE).
 
 <hr>
-Don't forget to leave a star ⭐️ ~ <a href="https://twitter.com/akhileshthite_" target="_blank"><img src="https://img.shields.io/twitter/follow/akhileshthite_?style=social" alt="twitter" /></a>
+Don't forget to leave a star ⭐️ ~ <a href="https://x.com/itsNikku876" target="_blank"><img src="https://img.shields.io/twitter/follow/itsNikku876?style=social" alt="twitter" /></a>
