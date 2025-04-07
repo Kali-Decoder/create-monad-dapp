@@ -1,8 +1,10 @@
+require("dotenv/config");
 require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config();
-
-const ACCOUNTS = process.env.PRIVATE_KEY ? [`${process.env.PRIVATE_KEY}`] : [];
-/** @type import('hardhat/config').HardhatUserConfig */
+require("@nomicfoundation/hardhat-verify");
+const MONAD_URL = "https://testnet-rpc.monad.xyz";
+const ACCOUNTS = process.env.DEPLOYER_ACCOUNT_PRIV_KEY
+  ? [`${process.env.DEPLOYER_ACCOUNT_PRIV_KEY}`]
+  : [];
 module.exports = {
   defaultNetwork: "hardhat",
   gasReporter: {
@@ -10,26 +12,34 @@ module.exports = {
   },
   networks: {
     hardhat: { chainId: 31337 },
-    monadTestnet: {
-      url: "https://testnet-rpc.monad.xyz",
-      chainId: 10143,
+    monad: {
+      url: MONAD_URL,
       accounts: ACCOUNTS,
     },
   },
-  sourcify: {
-    enabled: true,
-    apiUrl: "https://sourcify-api-monad.blockvision.org",
-    browserUrl: "https://testnet.monadexplorer.com",
-  },
   etherscan: {
+    apiKey: {},
+    customChains: [
+      {
+        network: "monad",
+        chainId: 10143,
+        urls: {
+          apiURL: "https://testnet.monadexplorer.com/api",
+          browserURL: "https://testnet.monadexplorer.com",
+        },
+      },
+    ],
+  },
+  sourcify: {
     enabled: false,
   },
   solidity: {
     version: "0.8.28",
     settings: {
-      metadata: {
-        bytecodeHash: "none", // disable ipfs
-        useLiteralContent: true, // use source code
+      evmVersion: "paris",
+      optimizer: {
+        enabled: true,
+        runs: 200,
       },
     },
   },
