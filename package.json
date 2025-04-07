@@ -1,8 +1,25 @@
 {
   "name": "create-monad-dapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.5",
+  "description": "A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network.",
+  "bin": "./bin/index.js",
+  "author": "Neeraj Choubisa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kali-Decoder/create-monad-dapp"
+  },
+  "keywords": [
+    "monad",
+    "monad network",
+    "react",
+    "hardhat",
+    "web3.storage",
+    "ipfs",
+    "web3",
+    "solidity",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -34,8 +51,5 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

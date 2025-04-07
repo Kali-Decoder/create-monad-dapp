@@ -1,96 +1,90 @@
-# Fastest Finger Scaffold
-
-Welcome to the Fastest Finger Scaffold! This project is designed to help hackers quickly set up their blockchain development environment during hackathons, so they can focus on building amazing projects without wasting time on initialization.
-
-## Features
-
-- **Pre-configured Wagmi**: Get started with Wagmi, a React Hooks library for Ethereum, without any setup.
-- **Integrated RainbowKit**: Easily add wallet connection functionality to your dApp with RainbowKit.
-- **Privy Integrated**: Use Privy to store and manage user data securely.
-- **Tailwind CSS**: Utilize Tailwind CSS to quickly style your project.
-- **Next.js**: Build your project with Next.js, a React framework for production.
-- **Blockchain Development Ready**: All necessary tools and libraries for blockchain development are pre-installed and configured.
-- **Optimized for Hackathons**: Spend less time setting up your development environment and more time building your project.
 
 
-## Getting Started
+<div align="center">
+    <img src="https://res.cloudinary.com/delg5k1gs/image/upload/v1708035198/daic/n/b5121cb2-0fcd-4ffd-ba92-a744f967dd3b/monad__a_parallelized_evm_layer_1_at_hyper_speed.png" alt="Platform">
+</div><br>
+<h1 align="center">create-monad-dapp</h1>
 
-Follow these steps to get your development environment up and running:
+A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the Monad network. The starter kit also includes pre-installed `web3.storage`, `tailwindcss`, `web3.js`, etc. packages.
 
-### Prerequisites
+## 📺 Quickstart
 
-Make sure you have the following installed on your machine:
+<!-- <div align="center">
+  <img src="/demo.gif" />
+</div> -->
 
-- Node.js (>= 14.x)
-- npm (>= 6.x) or yarn (>= 1.x)
+## 🛠️ Installation guide
 
-### Installation
+### ⌛️ create-monad-dapp command
 
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/your-username/fastest-finger-scaffold.git
-    ```
-
-2. Navigate to the project directory:
-
-    ```sh
-    cd fastest-finger-scaffold
-    ```
-
-3. Install the dependencies:
-
-    ```sh
-    pnpm install
-    ```
-
-    or
-
-    ```sh
-    yarn install
-    ```
-
-### Running the Project
-
-To start the development server, run:
+Open up your terminal (or command prompt) and type the following command:
 
 ```sh
-pnpm run dev
+npx create-monad-dapp <your-dapp-name>
+
+# cd into the directory
+cd <your-dapp-name>
 ```
 
-or
+> ⚠️ If you encounter any errors during package installation, please ensure that your `node.js` and `npm` versions are up-to-date.
+
+### 🔑 Private key
+
+Ensure you create a `.env` file in the `root` directory. Then paste your [Metamask private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) in `.env` with the variable name `PRIVATE_KEY` as follows:
 
 ```sh
-yarn start
+PRIVATE_KEY=1234
 ```
 
-This will launch the project in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ⚙️ Compile
 
-## Add ENV Variables
-- Create a `.env` file in the root directory of the project.
-- Add the following environment variables to the `.env` file:
-    ```sh
-    NEXT_PUBLIC_PRIVY_APP_ID=
-    NEXT_PUBLIC_RAINBOW_KET_ID= 
-    ```
+Now, you can write your contracts in `./contracts/` directory, replace `Greeter.sol` with `<your-contracts>.sol` file. To write tests, go to `./test` directory and create `<your-contracts>.test.js`.
 
+```sh
+npx hardhat compile
 
-## Usage
+# for testing the smart contracts
+npx hardhat test
+```
 
-- **Wagmi**: Utilize Wagmi hooks to interact with the Ethereum blockchain.
-- **RainbowKit**: Use RainbowKit components to add wallet connection features to your dApp.
+After successful compilation, the artifacts directory will be created in `./src/artifacts` with a JSON `/contracts/<your-contracts>.sol/<your-contracts>.json` containing ABI and Bytecode of your compiled smart contracts.
 
-## Contributing
+Please make the changes while [Importing](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js#L32) the JSON in `./src/app.js`.
 
-We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) for more details.
+### ⛓️ Deploy
 
-## License
+Before deploying the smart contracts, please make sure you have a `hyperspace testnet` in your Metamask wallet with sufficient funds, follow this [quickstart](https://github.com/filecoin-project/testnet-hyperspace#quickstart) guide if you do not have one.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+Also, make changes in `./scripts/deploy.js` (replace the greeter contract name with `<your-contract-name>`).
 
-## Acknowledgements
+For deploying the smart contracts to Monad network, type the following command:
 
-- [Wagmi](https://wagmi.sh)
-- [RainbowKit](https://www.rainbowkit.com)
+```sh
+npx hardhat run --network monad scripts/deploy.js
 
-Happy hacking!
+# testnet: npx hardhat run --network monad scripts/deploy.js
+```
+
+Copy-paste the deployed contract address [here](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/src/App.js#L32)
+
+```sh
+📜 Contract deployed to: 0x...
+```
+
+### 💻 React client
+
+start react app
+
+```sh
+npm start
+# Starting the development server...
+```
+
+Please read the [hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#quick-start) and [Monad Docs](https://www.monad.xyz/ecosystem) for more details.
+
+## ⚖️ License
+
+create-monad-dapp is licensed under the [MIT License](https://github.com/Kali-Decoder/create-monad-dapp/blob/main/LICENSE).
+
+<hr>
+Don't forget to leave a star ⭐️ ~ <a href="https://x.com/itsNikku876" target="_blank"><img src="https://img.shields.io/twitter/follow/itsNikku876?style=social" alt="twitter" /></a>
