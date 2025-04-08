@@ -64,7 +64,7 @@ importers:
         specifier: 15.1.7
         version: 15.1.7(eslint@9.21.0(jiti@1.21.7))(typescript@5.7.3)
       hardhat:
-        specifier: ^2.22.17
+        specifier: ^2.22.19
         version: 2.22.19(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@20.17.19)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
       postcss:
         specifier: ^8
