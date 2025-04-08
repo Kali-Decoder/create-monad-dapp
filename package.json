@@ -14,11 +14,11 @@
     "monad network",
     "react",
     "hardhat",
-    "web3.storage",
-    "ipfs",
-    "web3",
+    "etherjs",
     "solidity",
-    "tailwindcss"
+    "tailwindcss",
+    "rainbowkit",
+    "wagmi"
   ],
   "scripts": {
     "dev": "next dev",
