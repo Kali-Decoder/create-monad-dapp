@@ -26,6 +26,10 @@ A full-stack starter template built with **React**, **Hardhat**, and **Next.js**
 npx create-monad-dapp <your-dapp-name>
 cd <your-dapp-name>
 pnpm install # or yarn install
+npx hardhat compile # to compile contracts
+npx hardhat test # to run tests
+npx hardhat run scripts/deploy.js --network monad  # to deploy contracts
+pnpm run dev # or yarn start # to start the React app
 ```
 
 ---
