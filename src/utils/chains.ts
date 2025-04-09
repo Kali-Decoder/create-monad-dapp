@@ -14,7 +14,6 @@ const monadTestnet = {
     },
   },
 };
-
 export const chainArray = [monadTestnet];
 export const transportsObject = {
   [monadTestnet.id]: http()
