@@ -40,7 +40,7 @@ Create a `.env` file in the root directory and add:
 
 ```env
 PRIVATE_KEY=
-NEXT_PUBLIC_RAINBOW_KIT_ID=
+NEXT_PUBLIC_PROJECT_ID= // From Reown SDK 
 ```
 
 > 🔐 Use your Metamask private key and respective API IDs.
