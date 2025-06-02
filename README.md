@@ -44,6 +44,7 @@ NEXT_PUBLIC_PROJECT_ID= // From Reown SDK
 ```
 
 > 🔐 Use your Metamask private key and respective API IDs.
+> For Reown SDK Project ID go to https://cloud.reown.com/sign-up and configure React app.
 
 ---
 
